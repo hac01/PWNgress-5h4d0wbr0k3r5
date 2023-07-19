@@ -894,10 +894,29 @@ class PWNgress():
             os.remove(notification_filename)
 
 def main():
-    settings = read_settings_file("settings/PWNgress_settings.cfg")
-    PWNgress(settings["HTB_APP_TOKEN"], settings["HTB_TEAM_ID"], settings["DISCORD_WEBHOOK_URL"],
-             settings["FONT_HTB_NAME"], settings["FONT_MESSAGE"], settings["HTB_USERS_TO_IGNORE"],
-             settings["FONT_TABLE_HEADER"], settings["FONT_TABLE_NAMES"], settings["FONT_TABLE_DATA"])
+    settings = {
+        "HTB_APP_TOKEN": "YOUR TOKEN",
+        "HTB_TEAM_ID": "YOUR TEAM ID",
+        "DISCORD_WEBHOOK_URL": "",
+        "FONT_HTB_NAME": "Tektur",
+        "FONT_MESSAGE": "Tektur",
+        "HTB_USERS_TO_IGNORE": "",
+        "FONT_TABLE_HEADER": "Tektur",
+        "FONT_TABLE_NAMES": "Tektur",
+        "FONT_TABLE_DATA": "Tektur"
+    }
+
+    PWNgress(
+        settings["HTB_APP_TOKEN"],
+        settings["HTB_TEAM_ID"],
+        settings["DISCORD_WEBHOOK_URL"],
+        settings["FONT_HTB_NAME"],
+        settings["FONT_MESSAGE"],
+        settings["HTB_USERS_TO_IGNORE"],
+        settings["FONT_TABLE_HEADER"],
+        settings["FONT_TABLE_NAMES"],
+        settings["FONT_TABLE_DATA"]
+    )
 
 
 if __name__ == "__main__":
